@@ -8,6 +8,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -17,6 +26,9 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      grid-template-rows: 80vh repeat(7, min-content); } }
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.1);
@@ -122,9 +134,15 @@ body {
   background-position: center;
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, max-content) 1fr;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   padding: 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      grid-column: full-start/full-end; } }
+  @media only screen and (max-width: 75em) {
+    .header {
+      padding: 4rem; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -150,7 +168,8 @@ body {
     align-items: center;
     grid-column-gap: 3rem; }
     .header .seenon-logos img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(0.7); }
 
 .realtors {
@@ -161,6 +180,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 56.25em) {
+    .realtors {
+      grid-column: full-start/full-end; } }
   .realtors__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -182,7 +204,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   align-items: start;
+  height: 100%;
   margin: 15rem 0rem; }
+  @media only screen and (max-width: 56.25em) {
+    .features {
+      margin: 0rem;
+      padding: 8rem 0; } }
 
 .feature__box {
   display: grid;
@@ -208,6 +235,10 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .story__pictures {
+      grid-column: full-start/full-end;
+      padding: 2rem; } }
 
 .story__img {
   width: 100%; }
@@ -218,8 +249,11 @@ body {
   .story__img--2 {
     grid-column: 3/7;
     grid-row: 4/7;
-    transform: translateX(3svw);
+    transform: translateX(3vw);
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 75em) {
+      .story__img--2 {
+        transform: translateX(0); } }
 
 .story__content {
   background-color: #f9f7f6;
@@ -229,6 +263,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 75em) {
+    .story__content {
+      grid-column: full-start/full-end; } }
 
 .story__text {
   font-size: 1.5rem;

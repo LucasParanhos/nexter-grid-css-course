@@ -2,8 +2,8 @@
   background-color: $primary;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1 / -1;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 
   .nav-btn {
     border-radius: 0;
@@ -28,7 +28,7 @@ justify-content: center;
     }
 
     &::after {
-      transform: translateY(1.0rem);
+      transform: translateY(1rem);
     }
   }
 }

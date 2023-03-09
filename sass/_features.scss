@@ -5,8 +5,15 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   align-items: start;
+  height: 100%;
 
   margin: 15rem 0rem;
+
+  
+  @include respond(tab-port) {
+    margin: 0rem;
+    padding: 8rem 0;
+  }
 }
 
 .feature {

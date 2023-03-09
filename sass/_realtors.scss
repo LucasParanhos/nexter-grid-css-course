@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: center;
 
+  @include respond(tab-port) {
+    grid-column: full-start/full-end;
+  }
+  
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;

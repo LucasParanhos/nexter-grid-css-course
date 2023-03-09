@@ -1,6 +1,8 @@
 .header {
   background-color: $dark-gray-1;
   grid-column: full-start/col-end 6;
+
+
   background-image: linear-gradient(
       rgba($secondary, 0.93),
       rgba($secondary, 0.93)
@@ -11,9 +13,20 @@
 
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, max-content) 1fr;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   padding: 8rem;
+  
+
+  @include respond(tab-port) {
+    grid-column: full-start/full-end;
+  }
+
+  
+  @include respond(tab-land) {
+    padding: 4rem;
+  }
+
 
   &__logo {
     height: 3rem;
@@ -35,7 +48,8 @@
       color: $light-gray-2;
       align-items: center;
 
-      &::before, &::after{
+      &::before,
+      &::after {
         display: block;
         content: "";
         height: 1px;
@@ -50,7 +64,8 @@
       align-items: center;
       grid-column-gap: 3rem;
       img {
-        height: 2.5rem;
+        max-height: 2.5rem;
+        max-width: 100%;
         filter: brightness(0.7);
       }
     }

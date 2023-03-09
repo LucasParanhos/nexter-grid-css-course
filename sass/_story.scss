@@ -2,7 +2,11 @@
   &__pictures {
     background-color: $primary;
     grid-column: full-start / col-end 4;
-    background-image: linear-gradient(135deg, rgba($primary, 0.4), rgba($primary, 0.6)),
+    background-image: linear-gradient(
+        135deg,
+        rgba($primary, 0.4),
+        rgba($primary, 0.6)
+      ),
       url(../img/back.jpg);
     background-size: cover;
 
@@ -10,6 +14,11 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
+
+    @include respond(tab-land) {
+      grid-column: full-start/full-end;
+      padding: 2rem;
+    }
   }
 
   &__img {
@@ -24,8 +33,12 @@
     &--2 {
       grid-column: 3/7;
       grid-row: 4/7;
-      transform: translateX(3svw);
+      transform: translateX(3vw);
       box-shadow: 0 2rem 5rem rgba($black, 0.2);
+
+      @include respond(tab-land) {
+        transform: translateX(0);
+      }
     }
   }
 
@@ -38,6 +51,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @include respond(tab-land) {
+      grid-column: full-start/full-end;
+    }
   }
 
   &__text {
