@@ -15,7 +15,7 @@
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       grid-column: full-start/full-end;
       padding: 2rem;
     }
@@ -36,7 +36,7 @@
       transform: translateX(3vw);
       box-shadow: 0 2rem 5rem rgba($black, 0.2);
 
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         transform: translateX(0);
       }
     }
@@ -52,7 +52,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       grid-column: full-start/full-end;
     }
   }

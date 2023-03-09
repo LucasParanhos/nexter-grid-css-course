@@ -7,11 +7,10 @@
   align-items: start;
   height: 100%;
 
-  margin: 15rem 0rem;
+  padding: 15rem 0;
 
   
   @include respond(tab-port) {
-    margin: 0rem;
     padding: 8rem 0;
   }
 }
