@@ -37,6 +37,11 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1; }
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -111,11 +116,65 @@ body {
 
 .header {
   background-color: #54483a;
-  grid-column: full-start/col-end 6; }
+  grid-column: full-start/col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, max-content) 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1.5rem;
+  padding: 8rem; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__button {
+    align-self: flex-start;
+    justify-self: start; }
+  .header .seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    font-size: 1.6rem;
+    color: #aaa;
+    align-items: center; }
+    .header .seenon-text::before, .header .seenon-text::after {
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: currentColor; }
+  .header .seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 3rem; }
+    .header .seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(0.7); }
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-end 6 / full-end; }
+  grid-column: col-end 6 / full-end;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    margin-bottom: 5vh;
+    width: 100%; }
+  .realtors__img {
+    width: 7rem;
+    border-radius: 50rem;
+    display: block;
+    margin-right: 1rem; }
+  .realtors__sold {
+    text-transform: uppercase;
+    color: #aaa; }
 
 .features {
   grid-column: center-start / center-end;
